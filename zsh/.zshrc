@@ -1,13 +1,10 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory autocd beep nomatch
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/steven/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+source ~/.zsh/colors.zsh
+source ~/.zsh/setopt.zsh
+source ~/.zsh/exports.zsh
+source ~/.zsh/prompt.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/bindkeys.zsh
+source ~/.zsh/functions.zsh
+source ~/.zsh/history.zsh
+source ~/.zsh/zsh_hooks.zsh
