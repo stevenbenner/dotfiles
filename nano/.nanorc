@@ -183,10 +183,10 @@ set tabsize 4
 
 ## Paint the interface elements of nano.
 ## This is an example; by default there are no colors.
-# set titlecolor brightwhite,blue
-# set statuscolor brightwhite,green
-# set keycolor green
-# set functioncolor yellow
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,green
+set keycolor green
+set functioncolor yellow
 
 
 ## Setup of syntax coloring.
