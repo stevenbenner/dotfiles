@@ -6,3 +6,5 @@ alias ll='ls -GFhl --group-directories-first --color=auto'
 
 # Enable colors in grep and ignore VCS folders
 alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
+
+alias diff='colordiff'
