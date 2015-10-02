@@ -16,6 +16,7 @@ setopt INC_APPEND_HISTORY
 
 # Do not write events to history that are duplicates of previous events
 setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 # When searching history don't display results already cycled through twice
 setopt HIST_FIND_NO_DUPS
