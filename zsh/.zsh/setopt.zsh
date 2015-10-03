@@ -18,6 +18,9 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
+# Do not save history for commanding beginning with a space
+setopt HIST_IGNORE_SPACE
+
 # When searching history don't display results already cycled through twice
 setopt HIST_FIND_NO_DUPS
 
