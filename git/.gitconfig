@@ -9,3 +9,5 @@
 	helper = cache
 [core]
 	pager = less -R -x1,5
+[alias]
+	graph = log --oneline --graph --decorate --all
