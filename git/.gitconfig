@@ -8,6 +8,6 @@
 [credential]
 	helper = cache
 [core]
-	pager = less -R -x1,5
+	pager = less -RS -x1,5
 [alias]
 	graph = log --oneline --graph --decorate --all
