@@ -11,3 +11,4 @@
 	pager = less -RS -x1,5
 [alias]
 	graph = log --graph --all --pretty=format:'%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(dim white)[%an]%C(reset) %C(green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)'
+	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
