@@ -1,3 +1,12 @@
+# safer commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias ln='ln -i'
+alias rm='rm -I'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
 # Colorize output, add file type indicator, and put sizes in human readable format
 alias ls='ls -GFh --group-directories-first --color=auto'
 
