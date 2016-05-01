@@ -23,4 +23,10 @@ function git_prompt_info {
 	fi
 }
 
-PROMPT='%~%<< $(git_prompt_info)${PR_BOLD_WHITE}>%{${reset_color}%} '
+function ssh_prompt_info {
+	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+		echo "%F{blue}$(whoami)%f%F{white}@%F{cyan}$(hostname)%f "
+	fi
+}
+
+PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)${PR_BOLD_WHITE}>%{${reset_color}%} '
