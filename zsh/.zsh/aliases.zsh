@@ -17,3 +17,5 @@ alias ll='ls -GFhl --group-directories-first --color=auto'
 alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 
 alias diff='colordiff'
+
+alias newest='find . \( -path \*/.git -o -path \*/node_modules \) -prune -o -type f -printf "%TY-%Tm-%Td %TT %p\n" | sort -r | less'
