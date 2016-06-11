@@ -12,7 +12,14 @@ function set_running_app {
 }
 
 function preexec {
-	set_running_app
+	local a=${${1## *}[(w)1]}  # get the command
+	local b=${a##*\/}          # get the command basename
+	a="${b}${1#$a}"            # add back the parameters
+	a=${a//\%/\%\%}            # escape print specials
+	a=$(print -Pn "$a" | tr -d "\t\n\v\f\r")  # remove fancy whitespace
+	a=${(V)a//\%/\%\%}         # escape non-visibles and print specials
+
+	print -Pn "\e]2;$a\a"
 }
 
 function postexec {
