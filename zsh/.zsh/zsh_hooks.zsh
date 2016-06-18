@@ -1,3 +1,8 @@
+function precmd {
+	# print working directory to title
+	echo -ne "\e]2;$PWD\a"
+}
+
 function preexec {
 	local a=${${1## *}[(w)1]}  # get the command
 	local b=${a##*\/}          # get the command basename
