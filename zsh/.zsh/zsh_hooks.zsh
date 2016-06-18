@@ -1,6 +1,6 @@
 function precmd {
 	# print working directory to title
-	echo -ne "\e]2;$PWD\a"
+	print -Pn "\e]2;$PWD\a"
 }
 
 function preexec {
