@@ -10,6 +10,7 @@
 [core]
 	pager = less -RS -x1,5
 [diff]
+	algorithm = histogram
 	compactionHeuristic = true
 [status]
 	showUntrackedFiles = all
