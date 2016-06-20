@@ -12,6 +12,8 @@
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
+[fetch]
+	prune = true
 [status]
 	showUntrackedFiles = all
 [alias]
