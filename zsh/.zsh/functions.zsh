@@ -20,6 +20,19 @@ function extract {
 	fi
 }
 
+function git_pull_all() {
+	local current_branch run
+
+	current_branch=$(=git symbolic-ref HEAD 2> /dev/null)
+	[ "$1" = "-n" ] && shift && run=echo
+
+	for branch in $( git branch | cut -c3- ) ; do
+		$run git checkout $branch && $run git pull --ff-only || return 2
+	done
+
+	[ ${#current_branch} -gt 0 ] && $run git checkout "${current_branch#refs/heads/}"
+}
+
 man() {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
