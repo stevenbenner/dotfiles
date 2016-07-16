@@ -3,11 +3,22 @@
 	"caret_style": "wide",
 	"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
 	"font_face": "Source Code Pro",
 	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"scroll_past_end": false,
