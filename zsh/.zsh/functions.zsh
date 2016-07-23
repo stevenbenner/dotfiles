@@ -4,6 +4,8 @@ function extract {
 		case $1 in
 			*.7z)       7z x $1       ;;
 			*.bz2)      bunzip2 $1    ;;
+			*.cab)      cabextract $1 ;;
+			*.exe)      cabextract $1 ;;
 			*.gz)       gunzip $1     ;;
 			*.lzma)     unlzma $1     ;;
 			*.rar)      unrar x $1    ;;
