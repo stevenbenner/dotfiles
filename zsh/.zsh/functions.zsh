@@ -1,6 +1,6 @@
 function extract {
-	echo Extracting $1 ...
 	if [ -f $1 ] ; then
+		echo Extracting $1 ...
 		case $1 in
 			*.7z)       7z x $1       ;;
 			*.bz2)      bunzip2 $1    ;;
