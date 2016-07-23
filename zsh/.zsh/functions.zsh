@@ -25,7 +25,7 @@ function extract {
 	fi
 }
 
-function git_pull_all() {
+function git_pull_all {
 	local current_branch run
 
 	current_branch=$(=git symbolic-ref HEAD 2> /dev/null)
@@ -38,7 +38,7 @@ function git_pull_all() {
 	[ ${#current_branch} -gt 0 ] && $run git checkout "${current_branch#refs/heads/}"
 }
 
-man() {
+function man {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
 		LESS_TERMCAP_md=$(printf "\e[1;31m") \
