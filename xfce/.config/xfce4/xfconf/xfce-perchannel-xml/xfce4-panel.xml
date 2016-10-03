@@ -28,7 +28,12 @@
     <property name="plugin-2" type="string" value="pager">
       <property name="rows" type="uint" value="2"/>
     </property>
-    <property name="plugin-3" type="string" value="tasklist"/>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="sort-order" type="uint" value="4"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="window-scrolling" type="bool" value="false"/>
+    </property>
     <property name="plugin-4" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
