@@ -18,11 +18,11 @@ Color=#00C000
 Text=mem
 
 [SL_Swap]
-Enabled=true
+Enabled=false
 Use_Label=true
 Color=#F0F000
 Text=swap
 
 [SL_Uptime]
-Enabled=true
+Enabled=false
 
