@@ -8,5 +8,11 @@
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="default-view" type="string" value="ThunarDetailsView"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,107,50,50,232,50,50,70,202"/>
+  <property name="last-details-view-column-widths" type="string" value="50,169,50,50,379,50,50,93,154"/>
+  <property name="last-window-width" type="int" value="980"/>
+  <property name="last-window-height" type="int" value="662"/>
+  <property name="last-window-maximized" type="bool" value="false"/>
+  <property name="last-details-view-fixed-columns" type="bool" value="true"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
 </channel>
