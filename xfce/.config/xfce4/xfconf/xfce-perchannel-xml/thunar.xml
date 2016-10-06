@@ -18,4 +18,5 @@
   <property name="hidden-bookmarks" type="array">
     <value type="string" value="trash:///"/>
   </property>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_SMALL"/>
 </channel>
