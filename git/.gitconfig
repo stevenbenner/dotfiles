@@ -20,4 +20,5 @@
 	graph = log --graph --all --pretty=format:'%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(dim white)[%an]%C(reset) %C(green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)'
 	taggraph = log --graph --tags --date-order --simplify-by-decoration --pretty=format:'%ai %h %d'
 	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
+	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
 	pullall = !zsh -ic 'git_pull_all'
