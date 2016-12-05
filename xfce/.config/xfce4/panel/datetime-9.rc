@@ -1,6 +1,6 @@
 layout=1
-date_font=Bitstream Vera Sans 8
-time_font=Bitstream Vera Sans 8
+date_font=Inconsolata 13
+time_font=Inconsolata 13
 date_format=%m/%d/%Y
 time_format=%l:%M:%S %P
 
