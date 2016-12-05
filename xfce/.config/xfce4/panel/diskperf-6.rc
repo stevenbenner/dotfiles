@@ -6,7 +6,7 @@ Statistics=0
 XferRate=40
 CombineRWdata=0
 MonitorBarOrder=0
-ReadColor=#0000FF
-WriteColor=#FF0000
-ReadWriteColor=#00FF00
+ReadColor=rgb(0,0,255)
+WriteColor=rgb(255,0,0)
+ReadWriteColor=rgb(0,255,0)
 
