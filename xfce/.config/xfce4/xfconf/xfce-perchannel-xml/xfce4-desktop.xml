@@ -26,6 +26,7 @@
         </property>
       </property>
     </property>
+    <property name="single-workspace-mode" type="bool" value="false"/>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="file-icons" type="empty">
