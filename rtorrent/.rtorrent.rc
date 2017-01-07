@@ -34,7 +34,7 @@ session.path.set = ~/.cache/rtorrent
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
 #
-#schedule2 = watch_directory,5,5,load.start=./watch/*.torrent
+schedule2 = watch_directory, 10, 10, load.start=~/Downloads/torrents/watch/*.torrent
 #schedule2 = untied_directory,5,5,stop_untied=
 
 # Close torrents when diskspace is low.
