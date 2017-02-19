@@ -3,5 +3,6 @@
 <channel name="xfce4-power-manager" version="1.0">
   <property name="xfce4-power-manager" type="empty">
     <property name="power-button-action" type="uint" value="4"/>
+    <property name="blank-on-ac" type="int" value="5"/>
   </property>
 </channel>
