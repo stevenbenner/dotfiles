@@ -56,3 +56,8 @@ zstyle '*' single-ignored show
 if type grunt > /dev/null 2>&1; then
 	eval "$(grunt --completion=zsh)"
 fi
+
+# load gulp completions if gulp-cli is available
+if type gulp > /dev/null 2>&1; then
+	eval "$(gulp --completion=zsh)"
+fi
