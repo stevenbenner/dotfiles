@@ -10,6 +10,7 @@ launcher-show-description=true
 launcher-show-tooltip=true
 item-icon-size=2
 hover-switch-category=false
+category-show-name=true
 category-icon-size=1
 load-hierarchy=false
 recent-items-max=12
