@@ -12,8 +12,9 @@ throttle.max_peers.normal.set = 100
 throttle.min_peers.seed.set = 10
 throttle.max_peers.seed.set = 50
 
-# Maximum number of simultanious uploads per torrent.
+# Maximum number of simultanious downloads and uploads per torrent.
 #
+throttle.max_downloads.set = 50
 throttle.max_uploads.set = 15
 
 # Global upload and download rate in KiB. "0" for unlimited.
