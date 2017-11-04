@@ -12,9 +12,12 @@ source ~/.zsh/zsh_hooks.zsh
 
 # load zsh-syntax-highlighting if available
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+	# arch linux
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+	# debian
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+	# freebsd
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
