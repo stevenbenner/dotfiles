@@ -1,4 +1,4 @@
 # HISTORY
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh_history
+HISTFILE=~/.cache/zsh/history
