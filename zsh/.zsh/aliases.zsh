@@ -3,7 +3,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
 alias rm='rm -I'
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	alias chown='chown --preserve-root'
 	alias chmod='chmod --preserve-root'
 	alias chgrp='chgrp --preserve-root'
@@ -14,7 +14,7 @@ elif [[ "$OSTYPE" == "freebsd"* ]] && type gchown > /dev/null 2>&1; then
 fi
 
 # colored output and basic tweaks
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	alias ls='ls -GFh --group-directories-first --color=auto'
 	alias ll='ls -GFhl --group-directories-first --color=auto'
 	alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
