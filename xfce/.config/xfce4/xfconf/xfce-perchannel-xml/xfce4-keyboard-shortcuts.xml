@@ -35,7 +35,7 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
-      <property name="&lt;Super&gt;e" type="string" value="sh -c &quot;thunar &amp; xfce4-popup-whiskermenu&quot;"/>
+      <property name="&lt;Super&gt;e" type="string" value="sh -c &quot;xfconf-query --channel thunar --property /last-details-view-column-widths --set &quot;50,147,50,50,409,50,50,82,157&quot; &amp;&amp; thunar &amp; xfce4-popup-whiskermenu&quot;"/>
       <property name="&lt;Super&gt;r" type="string" value="sh -c &quot;xfce4-terminal &amp; xfce4-popup-whiskermenu&quot;"/>
       <property name="&lt;Super&gt;l" type="string" value="sh -c &quot;xflock4 &amp; xfce4-popup-whiskermenu&quot;"/>
     </property>
