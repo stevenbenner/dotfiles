@@ -1,5 +1,5 @@
 # safer commands
-alias cp='cp -i'
+alias cp='cp -ip'
 alias mv='mv -i'
 alias ln='ln -i'
 alias rm='rm -I'
