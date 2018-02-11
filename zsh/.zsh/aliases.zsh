@@ -1,16 +1,18 @@
 # safer commands
-alias cp='cp -ip'
-alias mv='mv -i'
-alias ln='ln -i'
-alias rm='rm -I'
+alias cp='cp -vip'
+alias mv='mv -vi'
+alias ln='ln -vi'
+alias rm='rm -vI'
+alias rmdir='rmdir -v'
+alias mkdir='mkdir -v'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	alias chown='chown --preserve-root'
-	alias chmod='chmod --preserve-root'
-	alias chgrp='chgrp --preserve-root'
+	alias chown='chown -c --preserve-root'
+	alias chmod='chmod -c --preserve-root'
+	alias chgrp='chgrp -c --preserve-root'
 elif [[ "$OSTYPE" == "freebsd"* ]] && type gchown > /dev/null 2>&1; then
-	alias chown='gchown --preserve-root'
-	alias chmod='gchmod --preserve-root'
-	alias chgrp='gchgrp --preserve-root'
+	alias chown='gchown -c --preserve-root'
+	alias chmod='gchmod -c --preserve-root'
+	alias chgrp='gchgrp -c --preserve-root'
 fi
 
 # colored output and basic tweaks
