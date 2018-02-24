@@ -1,4 +1,4 @@
-autoload -U compinit && compinit
+autoload -U compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION && compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 zmodload -i zsh/complist
 
 # man zshcontrib
