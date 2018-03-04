@@ -22,3 +22,4 @@
 	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
 	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
 	pullall = !zsh -ic 'git_pull_all'
+	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
