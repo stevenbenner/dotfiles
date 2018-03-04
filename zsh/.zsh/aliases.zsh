@@ -33,6 +33,9 @@ fi
 alias diff='colordiff'
 alias ip='ip -color'
 
+# xdg directories
+alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
+
 # custom commands
 alias newest='find . \( -path \*/.git -o -path \*/node_modules \) -prune -o -type f -printf "%TY-%Tm-%Td %TT %p\n" | sort -r | less'
 alias diskspace='du -S | sort -rn | less'
