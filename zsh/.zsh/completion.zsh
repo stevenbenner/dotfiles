@@ -1,4 +1,4 @@
-autoload -U compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION && compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+autoload -U compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION && compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 zmodload -i zsh/complist
 
 # man zshcontrib
@@ -8,7 +8,7 @@ zstyle ':vcs_info:*' enable git #svn cvs
 
 # Enable completion caching, use rehash to clear
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path ~/.cache/zsh/$HOST
+zstyle ':completion::complete:*' cache-path $XDG_CACHE_HOME/zsh/$HOST
 
 # Fallback to built in ls colors
 zstyle ':completion:*' list-colors ''
