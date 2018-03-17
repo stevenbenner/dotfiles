@@ -7,3 +7,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export PAGER='less'
 export EDITOR='nano'
 export LC_COLLATE='C'
+
+# set location of zsh config
+ZDOTDIR="$HOME/.zsh"
