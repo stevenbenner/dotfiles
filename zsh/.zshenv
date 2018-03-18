@@ -9,4 +9,4 @@ export EDITOR='nano'
 export LC_COLLATE='C'
 
 # set location of zsh config
-ZDOTDIR="$HOME/.zsh"
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
