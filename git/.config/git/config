@@ -8,7 +8,7 @@
 [credential]
 	helper = cache
 [core]
-	pager = less -RS -x1,5
+	pager = /usr/share/git/diff-highlight/diff-highlight | less -RS -x1,5
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
