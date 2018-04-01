@@ -18,5 +18,4 @@ setopt LIST_PACKED # make the completion list take less lines with variable widt
 
 # prompt
 setopt AUTO_MENU # automatically use menu completion after the second consecutive request for completion
-unsetopt MENU_COMPLETE # force the list display on ambiguious matches instead of selecting the first match
 setopt PROMPT_SUBST # enable parameter expansion, command substitution, and arithmetic expansion in the prompt
