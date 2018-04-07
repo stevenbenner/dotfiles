@@ -12,6 +12,18 @@
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
+[color "diff"]
+	commit = 214 bold
+	meta = yellow bold
+	frag = 38
+	old = 196 bold
+	new = 76 bold
+	whitespace = red reverse
+[color "diff-highlight"]
+	oldNormal = 196 bold
+	oldHighlight = 9 bold 52
+	newNormal = 76 bold
+	newHighlight = 82 bold 22
 [fetch]
 	prune = true
 [status]
