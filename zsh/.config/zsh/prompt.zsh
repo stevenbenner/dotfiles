@@ -25,7 +25,7 @@ function git_prompt_info {
 
 function ssh_prompt_info {
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-		echo "%F{blue}$(whoami)%f%F{white}@%F{cyan}$(hostname)%f "
+		echo "%F{blue}%n%F{white}@%F{cyan}%m%f "
 	fi
 }
 
