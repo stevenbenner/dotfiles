@@ -24,6 +24,8 @@
 	oldHighlight = 9 bold 52
 	newNormal = 76 bold
 	newHighlight = 82 bold 22
+[column]
+	tag = auto dense
 [fetch]
 	prune = true
 [status]
