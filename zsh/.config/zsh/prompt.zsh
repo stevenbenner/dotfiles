@@ -20,6 +20,8 @@ function git_prompt_info {
 
 	if [[ -n $ref ]]; then
 		echo "%F{green}[%B${ref#refs/heads/}%b]%f$gitstatus"
+	elif [[ ${gitst} =~ "HEAD detached at" ]]; then
+		echo "%F{red}[%Bdetached%b]%f "
 	fi
 }
 
