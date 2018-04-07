@@ -29,4 +29,4 @@ function ssh_prompt_info {
 	fi
 }
 
-PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)${PR_BOLD_WHITE}>%{${reset_color}%} '
+PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)► '
