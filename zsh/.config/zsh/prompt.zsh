@@ -27,7 +27,7 @@ function git_prompt_info {
 
 function ssh_prompt_info {
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-		echo "%F{blue}%n%F{white}@%F{cyan}%m%f "
+		echo "%F{033}%n%F{white}@%F{cyan}%m%f "
 	fi
 }
 
