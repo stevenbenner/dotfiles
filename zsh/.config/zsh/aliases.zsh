@@ -17,13 +17,13 @@ fi
 
 # colored output and basic tweaks
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	alias ls='ls -GFh --group-directories-first --color=auto'
-	alias ll='ls -GFhl --group-directories-first --color=auto'
+	alias ls='ls -GFhN --group-directories-first --color=auto'
+	alias ll='ls -GFhNl --group-directories-first --color=auto'
 	alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
 	if type gls > /dev/null 2>&1; then
-		alias ls='gls -GFh --group-directories-first --color=auto'
-		alias ll='gls -GFhl --group-directories-first --color=auto'
+		alias ls='gls -GFhN --group-directories-first --color=auto'
+		alias ll='gls -GFhNl --group-directories-first --color=auto'
 	else
 		alias ls='ls -GFh'
 		alias ll='ls -GFhl'
