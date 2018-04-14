@@ -1,5 +1,5 @@
 export LESS='--ignore-case --raw-control-chars'
-export P4CONFIG=.p4config
+export P4CONFIG='.p4config'
 
 # xdg directories
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
