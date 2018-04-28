@@ -1,14 +1,14 @@
-source $ZDOTDIR/colors.zsh
-source $ZDOTDIR/setopt.zsh
-source $ZDOTDIR/exports.zsh
-source $ZDOTDIR/prompt.zsh
-source $ZDOTDIR/completion.zsh
-source $ZDOTDIR/aliases.zsh
-source $ZDOTDIR/bindkeys.zsh
-source $ZDOTDIR/functions.zsh
-source $ZDOTDIR/history.zsh
+source "$ZDOTDIR/colors.zsh"
+source "$ZDOTDIR/setopt.zsh"
+source "$ZDOTDIR/exports.zsh"
+source "$ZDOTDIR/prompt.zsh"
+source "$ZDOTDIR/completion.zsh"
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/bindkeys.zsh"
+source "$ZDOTDIR/functions.zsh"
+source "$ZDOTDIR/history.zsh"
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
-source $ZDOTDIR/zsh_hooks.zsh
+source "$ZDOTDIR/zsh_hooks.zsh"
 
 # load zsh-syntax-highlighting if available
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then

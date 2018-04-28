@@ -1,6 +1,6 @@
 function extract {
-	if [ -f $1 ] ; then
-		echo Extracting $1 ...
+	if [ -f "$1" ] ; then
+		echo "Extracting $1 ..."
 		case $1 in
 			*.7z)       7z x ./"$1"       ;;
 			*.bz2)      bunzip2 ./"$1"    ;;
@@ -29,10 +29,10 @@ function git_pull_all {
 	local current_branch run
 
 	current_branch=$(=git symbolic-ref HEAD 2> /dev/null)
-	[ "$1" = "-n" ] && shift && run=echo
+	[ "$1" = "-n" ] && shift && run="echo"
 
 	for branch in $( git branch | cut -c3- ) ; do
-		$run git checkout $branch && $run git pull --ff-only || return 2
+		$run git checkout "$branch" && $run git pull --ff-only || return 2
 	done
 
 	[ ${#current_branch} -gt 0 ] && $run git checkout "${current_branch#refs/heads/}"
@@ -40,12 +40,12 @@ function git_pull_all {
 
 function man {
 	env \
-		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-		LESS_TERMCAP_md=$(printf "\e[1;31m") \
-		LESS_TERMCAP_me=$(printf "\e[0m") \
-		LESS_TERMCAP_se=$(printf "\e[0m") \
-		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-		LESS_TERMCAP_ue=$(printf "\e[0m") \
-		LESS_TERMCAP_us=$(printf "\e[1;32m") \
+		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
+		LESS_TERMCAP_md="$(printf '\e[1;31m')" \
+		LESS_TERMCAP_me="$(printf '\e[0m')" \
+		LESS_TERMCAP_se="$(printf '\e[0m')" \
+		LESS_TERMCAP_so="$(printf '\e[1;44;33m')" \
+		LESS_TERMCAP_ue="$(printf '\e[0m')" \
+		LESS_TERMCAP_us="$(printf '\e[1;32m')" \
 		man "$@"
 }
