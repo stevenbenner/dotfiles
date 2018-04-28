@@ -1,6 +1,6 @@
 function precmd {
 	# print working directory to title
-	print -Pn "\e]2;$PWD\a"
+	print -Pn "\\e]2;$PWD\\a"
 }
 
 function preexec {
@@ -11,7 +11,7 @@ function preexec {
 	a=$(print -Pn "$a" | tr -d '\t\n\v\f\r')  # remove fancy whitespace
 	a=${(V)a//\%/\%\%}         # escape non-visibles and print specials
 
-	print -Pn "\e]2;$a\a"
+	print -Pn "\\e]2;$a\\a"
 }
 
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
