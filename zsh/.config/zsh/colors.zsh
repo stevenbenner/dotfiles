@@ -1,4 +1,5 @@
-autoload colors; colors
+autoload colors
+colors
 
 # set terminal colors
 export CLICOLOR=1
