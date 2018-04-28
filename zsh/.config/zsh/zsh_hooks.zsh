@@ -8,7 +8,7 @@ function preexec {
 	local b=${a##*\/}          # get the command basename
 	a="${b}${1#$a}"            # add back the parameters
 	a=${a//\%/\%\%}            # escape print specials
-	a=$(print -Pn "$a" | tr -d "\t\n\v\f\r")  # remove fancy whitespace
+	a=$(print -Pn "$a" | tr -d '\t\n\v\f\r')  # remove fancy whitespace
 	a=${(V)a//\%/\%\%}         # escape non-visibles and print specials
 
 	print -Pn "\e]2;$a\a"
