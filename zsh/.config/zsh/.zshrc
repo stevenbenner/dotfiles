@@ -7,7 +7,6 @@ source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/bindkeys.zsh"
 source "$ZDOTDIR/functions.zsh"
 source "$ZDOTDIR/history.zsh"
-[[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 source "$ZDOTDIR/zsh_hooks.zsh"
 
 # load zsh-syntax-highlighting if available

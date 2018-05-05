@@ -15,6 +15,7 @@ function preexec {
 }
 
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
+	source /usr/share/nvm/init-nvm.sh
 	autoload -U add-zsh-hook
 	load-nvmrc() {
 		if [[ -f .nvmrc && -r .nvmrc ]]; then
