@@ -14,6 +14,7 @@ function preexec {
 	print -Pn "\\e]2;$a\\a"
 }
 
+# load nvm if available and add hooks
 if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
 	source /usr/share/nvm/init-nvm.sh
 	autoload -U add-zsh-hook
