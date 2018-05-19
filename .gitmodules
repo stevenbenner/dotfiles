@@ -1,4 +1,0 @@
-[submodule "mpv/.config/mpv/scripts/mpv-stats"]
-	path = mpv/.config/mpv/scripts/mpv-stats
-	url = git@github.com:Argon-/mpv-stats.git
-	branch = master
