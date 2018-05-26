@@ -30,6 +30,8 @@
 	prune = true
 [status]
 	showUntrackedFiles = all
+[log]
+	mailmap = true
 [alias]
 	graph = log --graph --branches --remotes --tags --date-order --pretty=format:'%C(033)%h %C(white)%s %C(dim cyan)[%an] %C(green)(%ar)%C(auto)%d'
 	taggraph = log --graph --tags --date-order --simplify-by-decoration --pretty=format:'%ai %h %d'
