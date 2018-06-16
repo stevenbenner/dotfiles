@@ -8,7 +8,7 @@
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="default-view" type="string" value="ThunarDetailsView"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,147,50,50,409,50,50,82,157"/>
+  <property name="last-details-view-column-widths" type="string" value="50,138,50,50,456,50,50,82,157,132"/>
   <property name="last-window-width" type="int" value="980"/>
   <property name="last-window-height" type="int" value="662"/>
   <property name="last-window-maximized" type="bool" value="false"/>
