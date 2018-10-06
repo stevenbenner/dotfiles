@@ -7,7 +7,7 @@
   <property name="last-separator-position" type="int" value="170"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="default-view" type="string" value="ThunarDetailsView"/>
-  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
   <property name="last-details-view-column-widths" type="string" value="50,138,50,50,456,50,50,82,157,132"/>
   <property name="last-window-width" type="int" value="980"/>
   <property name="last-window-height" type="int" value="662"/>
@@ -20,4 +20,5 @@
     <value type="string" value="trash:///"/>
   </property>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_SMALL"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
 </channel>
