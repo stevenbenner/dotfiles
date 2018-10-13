@@ -39,3 +39,4 @@
 	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
 	pullall = !zsh -ic 'git_pull_all'
 	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
+	whoami = !"git config --get user.name && git config --get user.email"
