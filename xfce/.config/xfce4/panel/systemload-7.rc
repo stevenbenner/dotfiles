@@ -1,5 +1,5 @@
 [Main]
-Timeout=250
+Timeout=500
 Timeout_Seconds=1
 Use_Timeout_Seconds=true
 Use_Click_Command=false

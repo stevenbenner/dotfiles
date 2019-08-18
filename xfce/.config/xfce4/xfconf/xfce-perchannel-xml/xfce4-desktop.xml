@@ -36,4 +36,8 @@
       <property name="show-home" type="bool" value="false"/>
     </property>
   </property>
+  <property name="last" type="empty">
+    <property name="window-width" type="int" value="581"/>
+    <property name="window-height" type="int" value="570"/>
+  </property>
 </channel>

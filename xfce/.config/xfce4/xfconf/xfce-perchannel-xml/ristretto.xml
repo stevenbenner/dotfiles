@@ -5,5 +5,14 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
+    <property name="bgcolor-override" type="bool" value="false"/>
+    <property name="bgcolor" type="array">
+      <value type="double" value="0.000000"/>
+      <value type="double" value="0.000000"/>
+      <value type="double" value="0.000000"/>
+      <value type="double" value="0.000000"/>
+    </property>
+    <property name="height" type="uint" value="1050"/>
+    <property name="width" type="uint" value="1550"/>
   </property>
 </channel>
