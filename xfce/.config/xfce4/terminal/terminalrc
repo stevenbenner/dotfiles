@@ -27,5 +27,5 @@ MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
-ScrollingLines=3000
+ScrollingLines=30000
 
