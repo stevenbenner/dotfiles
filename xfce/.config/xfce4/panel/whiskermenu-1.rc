@@ -1,6 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
 recent=
-button-title=Applications
 button-icon=distributor-logo-archlinux
 button-single-row=false
 show-button-title=false
@@ -13,6 +12,7 @@ hover-switch-category=false
 category-show-name=true
 category-icon-size=1
 load-hierarchy=false
+view-as-icons=false
 recent-items-max=12
 favorites-in-recent=false
 display-recent-default=false
