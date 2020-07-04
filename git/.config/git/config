@@ -29,6 +29,8 @@
 	tag = auto dense
 [fetch]
 	prune = true
+[pull]
+	ff = only
 [status]
 	showUntrackedFiles = all
 [log]
