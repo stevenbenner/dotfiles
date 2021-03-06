@@ -22,6 +22,7 @@
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
+	"remember_full_screen": true,
 	"scroll_past_end": false,
 	"theme": "TwoDark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
