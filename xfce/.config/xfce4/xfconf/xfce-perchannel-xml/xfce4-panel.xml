@@ -41,7 +41,17 @@
     </property>
     <property name="plugin-5" type="string" value="netload"/>
     <property name="plugin-6" type="string" value="diskperf"/>
-    <property name="plugin-7" type="string" value="systemload"/>
+    <property name="plugin-7" type="string" value="systemload">
+      <property name="uptime" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="swap" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="network" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+    </property>
     <property name="plugin-8" type="string" value="systray">
       <property name="show-frame" type="bool" value="false"/>
     </property>
