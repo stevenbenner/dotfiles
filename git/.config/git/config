@@ -44,3 +44,5 @@
 	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
 	activefiles = !"git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -25"
 	whoami = !"git config --get user.name && git config --get user.email"
+	outgoing = !git fetch && git log FETCH_HEAD..
+	incoming = !git fetch && git log ..FETCH_HEAD
