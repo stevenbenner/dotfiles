@@ -1,7 +1,6 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Theme - TwoDark/TwoDark.tmTheme",
 	"draw_shadows": false,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
@@ -25,7 +24,7 @@
 	"line_padding_top": 2,
 	"remember_full_screen": true,
 	"scroll_past_end": false,
-	"theme": "TwoDark.sublime-theme",
+	"theme": "Default Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false
 }
