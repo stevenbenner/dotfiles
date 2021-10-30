@@ -1,3 +1,11 @@
 ssh/*
 sublime-text-3/*
 xfce/.config/xfce4/desktop/
+xfce/.config/xfce4/terminal/accels.scm
+xfce/.config/xfce4/xfce4-screenshooter
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/displays.xml
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/keyboard-layout.xml
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-mime-settings.xml
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml
+xfce/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screensaver.xml
