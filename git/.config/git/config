@@ -6,6 +6,8 @@
 	username = steven.benner
 [credential "http://wemo-git.belkin.com/"]
 	username = steven.benner
+[include]
+	path = config.local
 [credential]
 	helper = cache
 [core]
