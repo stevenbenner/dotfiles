@@ -2,10 +2,6 @@
 	name = Steven Benner
 	email = admin@stevenbenner.com
 	signingKey = "2CD4EBA98A45335E"
-[credential "https://git.belkin.com/"]
-	username = steven.benner
-[credential "http://wemo-git.belkin.com/"]
-	username = steven.benner
 [include]
 	path = config.local
 [credential]
