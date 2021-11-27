@@ -25,6 +25,8 @@
 	newHighlight = 82 bold 22
 [column]
 	tag = auto dense
+[init]
+	defaultBranch = master
 [fetch]
 	prune = true
 [pull]
