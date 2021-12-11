@@ -10,3 +10,4 @@ set functioncolor yellow
 
 # import syntax highlighting config files
 include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano-syntax-highlighting/*.nanorc"
