@@ -1,3 +1,10 @@
+# create zsh cache directory if it does not already exist
+if [[ ! -d "$XDG_CACHE_HOME/zsh" ]]; then
+	echo 'No zsh cache directory found! Creating cache directory.'
+	mkdir -p "$XDG_CACHE_HOME/zsh"
+fi
+
+# load configuration files
 source "$ZDOTDIR/colors.zsh"
 source "$ZDOTDIR/setopt.zsh"
 source "$ZDOTDIR/exports.zsh"
