@@ -17,5 +17,8 @@
     <property name="toolbar" type="empty">
       <property name="show" type="bool" value="false"/>
     </property>
+    <property name="thumbnails" type="empty">
+      <property name="size" type="uint" value="5"/>
+    </property>
   </property>
 </channel>
