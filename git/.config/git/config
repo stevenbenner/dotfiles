@@ -25,6 +25,8 @@
 	newHighlight = 82 bold 22
 [column]
 	tag = auto dense
+[commit]
+	verbose = true
 [init]
 	defaultBranch = master
 [fetch]
