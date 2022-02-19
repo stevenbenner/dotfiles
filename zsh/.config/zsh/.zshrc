@@ -27,3 +27,8 @@ elif [[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 	# freebsd
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# set tab width
+if command -v tabs &> /dev/null; then
+	tabs -4
+fi
