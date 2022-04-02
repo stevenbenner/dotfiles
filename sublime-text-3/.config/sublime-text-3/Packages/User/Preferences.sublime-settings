@@ -19,7 +19,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
@@ -27,5 +27,5 @@
 	"scroll_past_end": false,
 	"theme": "Default Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
-	"update_check": false
+	"update_check": false,
 }
