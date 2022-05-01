@@ -11,6 +11,8 @@
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
+[merge]
+	conflictStyle = diff3
 [color "diff"]
 	commit = 214 bold
 	meta = yellow bold
