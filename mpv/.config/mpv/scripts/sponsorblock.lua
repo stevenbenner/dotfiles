@@ -1,0 +1,1 @@
+../scripts-submodules/mpv_sponsorblock/sponsorblock.lua
