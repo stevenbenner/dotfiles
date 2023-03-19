@@ -13,6 +13,12 @@
 	compactionHeuristic = true
 [merge]
 	conflictStyle = diff3
+[blame]
+	coloring = highlightRecent
+[color "blame"]
+	highlightRecent = 240, 36 month ago, 242, 24 month ago, 244, 12 month ago, 246, \
+		9 month ago, 248, 6 month ago, 250, 3 month ago, 252, 2 month ago, 254, \
+		1 month ago, 178, 3 weeks ago, 216, 2 weeks ago, 215, 1 week ago, 214
 [color "diff"]
 	commit = 214 bold
 	meta = yellow bold
