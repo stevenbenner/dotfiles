@@ -1,6 +1,5 @@
 [user]
 	name = Steven Benner
-	email = admin@stevenbenner.com
 	signingKey = "2CD4EBA98A45335E"
 [include]
 	path = config.local
