@@ -55,5 +55,5 @@
 	whoami = !git config --get user.name && git config --get user.email
 	outgoing = !git fetch && git log FETCH_HEAD..
 	incoming = !git fetch && git log ..FETCH_HEAD
-	makehome = !git config user.email `echo 'YWRtaW5Ac3RldmVuYmVubmVyLmNvbQo=' | base64 -d`; git config commit.gpgSign true; git config tag.gpgSign true
-	makework = !git config user.email `echo 'c3RldmVuLmJlbm5lckBsaW5rc3lzLmNvbQo=' | base64 -d`; git config commit.gpgSign false; git config tag.gpgSign false
+	makehome = !git config user.email `echo 'YWRtaW5Ac3RldmVuYmVubmVyLmNvbQo=' | base64 -d` && git config commit.gpgSign true && git config tag.gpgSign true
+	makework = !git config user.email `echo 'c3RldmVuLmJlbm5lckBsaW5rc3lzLmNvbQo=' | base64 -d` && git config commit.gpgSign false && git config tag.gpgSign false
