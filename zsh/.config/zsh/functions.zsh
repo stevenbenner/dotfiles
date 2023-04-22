@@ -28,7 +28,7 @@ function extract {
 function git_pull_all {
 	local current_branch run
 
-	current_branch=$(=git symbolic-ref HEAD 2> /dev/null)
+	current_branch=$(git symbolic-ref HEAD 2> /dev/null)
 	[ "$1" = "-n" ] && shift && run="echo"
 
 	for branch in $(git branch | cut -c 3-) ; do

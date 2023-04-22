@@ -1,6 +1,6 @@
 function git_prompt_info {
-	local ref=$(=git symbolic-ref HEAD 2> /dev/null)
-	local gitst="$(=git status 2> /dev/null)"
+	local ref=$(git symbolic-ref HEAD 2> /dev/null)
+	local gitst="$(git status 2> /dev/null)"
 	local gitstatus
 
 	if [[ -f .git/MERGE_HEAD ]]; then
