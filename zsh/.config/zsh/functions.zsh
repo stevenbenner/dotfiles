@@ -31,7 +31,7 @@ function git_pull_all {
 	current_branch=$(=git symbolic-ref HEAD 2> /dev/null)
 	[ "$1" = "-n" ] && shift && run="echo"
 
-	for branch in $( git branch | cut -c3- ) ; do
+	for branch in $(git branch | cut -c 3-) ; do
 		$run git checkout "$branch" && $run git pull --ff-only || return 2
 	done
 
