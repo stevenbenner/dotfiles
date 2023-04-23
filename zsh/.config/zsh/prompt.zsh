@@ -32,4 +32,4 @@ function ssh_prompt_info {
 	fi
 }
 
-PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)► '
+export PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)► '
