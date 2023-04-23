@@ -14,7 +14,7 @@ function git_prompt_info {
 	elif [[ ${gitst} =~ 'use "git add' ]]; then
 		gitstatus="%F{red}%B!%b%f"
 	elif [[ ${gitst} =~ 'have diverged' ]]; then
-		gitstatus="%F{161}][%b%f"
+		gitstatus="%F{161}][%f"
 	elif [[ -n $(git checkout HEAD 2> /dev/null | grep ahead) ]]; then
 		gitstatus="%F{yellow}%B*%b%f"
 	fi
