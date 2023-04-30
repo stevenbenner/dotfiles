@@ -1,28 +1,49 @@
 function git_prompt_info {
-	local ref=$(git symbolic-ref HEAD 2> /dev/null)
-	local gitst="$(git status 2> /dev/null)"
 	local gitstatus
 
-	if [[ -f .git/MERGE_HEAD ]]; then
-		if [[ ${gitst} =~ 'unmerged' ]]; then
-			gitstatus="%F{red}unmerged%f"
-		else
-			gitstatus="%F{green}merged%f"
-		fi
-	elif [[ ${gitst} =~ 'Changes to be committed' ]]; then
-		gitstatus="%F{blue}%B!%b%f"
-	elif [[ ${gitst} =~ 'use "git add' ]]; then
-		gitstatus="%F{red}%B!%b%f"
-	elif [[ ${gitst} =~ 'have diverged' ]]; then
-		gitstatus="%F{161}][%f"
-	elif [[ -n $(git checkout HEAD 2> /dev/null | grep ahead) ]]; then
-		gitstatus="%F{yellow}%B*%b%f"
-	fi
+	gitstatus=$(git status --porcelain=v2 --branch 2> /dev/null)
 
-	if [[ -n $ref ]]; then
-		echo "%F{green}[%B${ref#refs/heads/}%b]%f $gitstatus"
-	elif [[ ${gitst} =~ 'HEAD detached at' ]]; then
-		echo "%F{red}[%Bdetached%b]%f "
+	# if we're in a git repo
+	if [ $? -ne 128 ]; then
+		local branch ab chmark abmark
+
+		branch=$(awk '$2 == "branch.head" { print $3 }' <<< "$gitstatus")
+		ab=$(awk '$2 == "branch.ab" { gsub(/[+-]/, ""); print $3,$4 }' <<< "$gitstatus")
+
+		# pending changes mark
+		if [[ -f .git/MERGE_HEAD ]]; then
+			# merge in progress
+			if [[ "$(awk '$1 == u { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+				chmark="%F{red}unmerged%f" # have unmerged changes
+			else
+				chmark="%F{green}merged%f" # have merged changes
+			fi
+		elif [[ "$(awk '$1 ~ /^[12]$/ && $2 ~ /^[MTADRC]/ { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+			chmark="%F{blue}%B⊕%b%f" # have staged changes
+		elif [[ "$(awk '$1 ~ /^[12?]$/ { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+			chmark="%F{red}%B⊞%b%f" # have unstaged changes
+		fi
+
+		# upstream sync mark
+		case "$ab" in
+			'')
+				abmark="%F{magenta}%B⋪%b%f" ;; # no upstream
+			'0 0')
+				abmark="%F{green}%B≣%b%f" ;; # synced with upstream
+			'0 '*)
+				abmark="%F{blue}%B⊂%b%f" ;; # behind upstream
+			*' 0')
+				abmark="%F{yellow}%B⊃%b%f" ;; # ahead of upstream
+			*)
+				abmark="%F{red}%B⊉%b%f" ;; # diverged
+		esac
+
+		# full git status with current branch
+		if [[ "$branch" != '(detached)' ]]; then
+			echo "%F{green}[%B$branch%b]%f$abmark$chmark " # on a branch
+		else
+			echo "%F{red}[%Bdetached%b]%f " # detached from branch
+		fi
 	fi
 }
 
