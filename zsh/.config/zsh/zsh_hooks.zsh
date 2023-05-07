@@ -13,19 +13,3 @@ function preexec {
 
 	print -Pn "\\e]2;$a\\a"
 }
-
-# load nvm if available and add hooks
-if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
-	source /usr/share/nvm/init-nvm.sh
-	autoload -U add-zsh-hook
-	load-nvmrc() {
-		if [[ -f .nvmrc && -r .nvmrc ]]; then
-			nvm use
-		elif [[ $(nvm version) != 'system' ]]; then
-			echo "Reverting to nvm system version"
-			nvm use system
-		fi
-	}
-	add-zsh-hook chpwd load-nvmrc
-	load-nvmrc
-fi

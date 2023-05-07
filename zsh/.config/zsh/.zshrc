@@ -15,6 +15,7 @@ source "$ZDOTDIR/bindkeys.zsh"
 source "$ZDOTDIR/functions.zsh"
 source "$ZDOTDIR/history.zsh"
 source "$ZDOTDIR/zsh_hooks.zsh"
+source "$ZDOTDIR/nvm.zsh"
 
 # load zsh-syntax-highlighting if available
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
