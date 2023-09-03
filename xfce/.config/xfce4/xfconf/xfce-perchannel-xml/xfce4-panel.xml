@@ -24,7 +24,22 @@
     <property name="dark-mode" type="bool" value="true"/>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="whiskermenu"/>
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="button-icon" type="string" value="distributor-logo-archlinux"/>
+      <property name="recent-items-max" type="int" value="14"/>
+      <property name="position-search-alternate" type="bool" value="true"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="menu-width" type="int" value="430"/>
+      <property name="menu-height" type="int" value="740"/>
+      <property name="menu-opacity" type="int" value="85"/>
+      <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
+      <property name="show-command-switchuser" type="bool" value="true"/>
+      <property name="favorites" type="array">
+      </property>
+      <property name="recent" type="array">
+      </property>
+    </property>
     <property name="plugin-2" type="string" value="pager">
       <property name="rows" type="uint" value="2"/>
     </property>
