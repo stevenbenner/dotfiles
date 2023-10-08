@@ -6,5 +6,6 @@
     <property name="blank-on-ac" type="int" value="13"/>
     <property name="dpms-on-ac-sleep" type="uint" value="14"/>
     <property name="dpms-on-ac-off" type="uint" value="15"/>
+    <property name="dpms-enabled" type="bool" value="true"/>
   </property>
 </channel>
