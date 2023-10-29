@@ -29,10 +29,13 @@ function extract {
 			*.zip)
 				unzip "./$1" ;;
 			*)
-				echo "'$1' cannot be extracted via extract()" ;;
+				echo "'$1' cannot be extracted via extract()"
+				return 1
+				;;
 		esac
 	else
 		echo "'$1' is not a valid file"
+		return 1
 	fi
 }
 
