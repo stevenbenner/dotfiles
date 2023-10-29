@@ -16,21 +16,21 @@ function extract {
 		*.7z)
 			7z x "./$1" ;;
 		*.bz2)
-			bunzip2 "./$1" ;;
+			bunzip2 --keep "./$1" ;;
 		*.cab|*.exe)
 			cabextract "./$1" ;;
 		*.gz)
-			gunzip "./$1" ;;
+			gunzip --keep "./$1" ;;
 		*.lzma)
-			unlzma "./$1" ;;
+			unlzma --keep "./$1" ;;
 		*.rar)
 			unrar x "./$1" ;;
 		*.tar)
 			tar xf "./$1" ;;
 		*.xz)
-			unxz "./$1" ;;
+			unxz --keep "./$1" ;;
 		*.Z)
-			uncompress "./$1" ;;
+			uncompress -k "./$1" ;;
 		*.zip)
 			unzip "./$1" ;;
 		*)
