@@ -13,6 +13,8 @@ function extract {
 			tar xzf "./$1" ;;
 		*.tar.xz|*.txz)
 			tar xJf "./$1" ;;
+		*.tar.zst)
+			tar --zstd -xf "./$1" ;;
 		*.7z)
 			7z x "./$1" ;;
 		*.bz2)
@@ -33,6 +35,8 @@ function extract {
 			uncompress -k "./$1" ;;
 		*.zip)
 			unzip "./$1" ;;
+		*.zst)
+			unzstd "./$1" ;;
 		*)
 			echo "$1 is not a supported file format" >&2
 			return 1
