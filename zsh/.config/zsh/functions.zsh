@@ -11,7 +11,7 @@ function extract {
 			tar xjf "./$1" ;;
 		*.tar.gz|*.tgz)
 			tar xzf "./$1" ;;
-		*.tar.xz)
+		*.tar.xz|*.txz)
 			tar xJf "./$1" ;;
 		*.7z)
 			7z x "./$1" ;;
