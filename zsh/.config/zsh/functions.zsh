@@ -34,7 +34,7 @@ function extract {
 		*.zip)
 			unzip "./$1" ;;
 		*)
-			echo "'$1' cannot be extracted via extract()" >&2
+			echo "$1 is not a supported file format" >&2
 			return 1
 			;;
 	esac
