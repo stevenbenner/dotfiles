@@ -1,6 +1,6 @@
 function extract {
 	if [ ! -f "$1" ]; then
-		echo "'$1' is not a valid file"
+		echo "'$1' is not a valid file" >&2
 		return 1
 	fi
 
@@ -34,7 +34,7 @@ function extract {
 		*.zip)
 			unzip "./$1" ;;
 		*)
-			echo "'$1' cannot be extracted via extract()"
+			echo "'$1' cannot be extracted via extract()" >&2
 			return 1
 			;;
 	esac
