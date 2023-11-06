@@ -4,12 +4,14 @@ function precmd {
 }
 
 function preexec {
-	local a=${${1## *}[(w)1]}  # get the command
-	local b=${a##*\/}          # get the command basename
-	a="${b}${1#$a}"            # add back the parameters
-	a=${a//\%/\%\%}            # escape print specials
-	a=$(print -Pn "$a" | tr -d '\t\n\v\f\r')  # remove fancy whitespace
-	a=${(V)a//\%/\%\%}         # escape non-visibles and print specials
+	local trimarg cmd basecmd
 
-	print -Pn "\\e]2;$a\\a"
+	trimarg="${1#"${1%%[![:space:]]*}"}"  # trim leading whitespace
+	cmd=${trimarg[(w)1]}                  # get the command
+	basecmd=${cmd##*\/}                   # get the command basename
+	cmd="${basecmd}${trimarg#"$cmd"}"     # add back the parameters
+	cmd=$(print -Pn "$cmd" | tr -d '\t\n\v\f\r')  # remove fancy whitespace
+	cmd=${(V)cmd//\%/\%\%}                # escape non-visibles and print specials
+
+	print -Pn "\\e]2;$cmd\\a"
 }
