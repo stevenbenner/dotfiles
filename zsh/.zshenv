@@ -9,4 +9,5 @@ export EDITOR='nano'
 export LC_COLLATE='C'
 
 # set location of zsh config
+# shellcheck disable=SC2034
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"

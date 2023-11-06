@@ -53,4 +53,5 @@ function ssh_prompt_info {
 	fi
 }
 
+# shellcheck disable=SC2016
 export PROMPT='$(ssh_prompt_info)%~%<< $(git_prompt_info)► '

@@ -3,6 +3,7 @@ function precmd {
 	print -Pn "\e]2;$PWD\a"
 }
 
+# shellcheck disable=SC2296
 function preexec {
 	local trimarg cmd basecmd
 
