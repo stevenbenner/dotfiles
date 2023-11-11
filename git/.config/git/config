@@ -50,6 +50,7 @@
 	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
 	authors = shortlog -sn --no-merges
 	pullall = !zsh -ic 'git_pull_all'
+	whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
 	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
 	activefiles = !git log --format=format: --name-only | grep -E -v '^$' | sort | uniq -c | sort -rg | head -25
 	whoami = !git config --get user.name && git config --get user.email
