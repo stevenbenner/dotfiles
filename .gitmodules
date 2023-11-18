@@ -1,4 +1,4 @@
 [submodule "mpv/.config/mpv/scripts-submodules/mpv_sponsorblock"]
 	path = mpv/.config/mpv/scripts-submodules/mpv_sponsorblock
-	url = git@github.com:po5/mpv_sponsorblock.git
+	url = https://github.com/po5/mpv_sponsorblock.git
 	branch = master
