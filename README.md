@@ -1,18 +1,24 @@
 # dotfiles
 
-This is my collection of configuration files. These are only fully tested on an [Arch Linux](https://archlinux.org/) system, however I also use most of these on [Debian](https://www.debian.org/) and [FreeBSD](https://www.freebsd.org/) systems.
+This is my collection of configuration files. These are only fully tested on an [Arch Linux][archlinux] system, however I also use most of these on [Debian][debian] and [FreeBSD][freebsd] systems.
+
+[archlinux]: https://archlinux.org/
+[debian]: https://www.debian.org/
+[freebsd]: https://www.debian.org/
 
 ## Installation
 
 ### Stow
 
-This repository is designed to have individual folders symlinked with the [GNU Stow](https://www.gnu.org/software/stow/) utility.
+This repository is designed to have individual folders symlinked with the [GNU Stow][stow] utility.
 
 For this to work the dotfiles folder needs to be in the home directory (e.g. `~/dotfiles/`). You can then simply `cd` into the `dotfiles` folder and stow a specific config folder to hook it up.
 
 Example:
 
 `stow git`
+
+[stow]: https://www.gnu.org/software/stow/
 
 ### Manual symlinks
 
