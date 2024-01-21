@@ -2,9 +2,12 @@
 
 This is my collection of configuration files. These are only fully tested on an [Arch Linux][archlinux] system, however I also use most of these on [Debian][debian] and [FreeBSD][freebsd] systems.
 
+This software is licensed under the [MIT-0 license][license].
+
 [archlinux]: https://archlinux.org/
 [debian]: https://www.debian.org/
 [freebsd]: https://www.debian.org/
+[license]: LICENSE.txt
 
 ## Installation
 
