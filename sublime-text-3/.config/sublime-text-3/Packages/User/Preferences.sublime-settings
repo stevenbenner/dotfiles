@@ -3,6 +3,13 @@
 	"caret_style": "wide",
 	"draw_shadows": false,
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*~",
+		"*.a",
+		"*.o",
+		".git",
+	],
 	"folder_exclude_patterns":
 	[
 		".git",
