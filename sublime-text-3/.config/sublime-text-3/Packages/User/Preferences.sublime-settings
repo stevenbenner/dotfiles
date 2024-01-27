@@ -21,6 +21,7 @@
 	[
 		"Vintage",
 	],
+	"index_files": false,
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"remember_full_screen": true,
