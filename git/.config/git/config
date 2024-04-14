@@ -34,7 +34,10 @@
 [column]
 	tag = auto dense
 [commit]
+	gpgSign = true
 	verbose = true
+[tag]
+	gpgSign = true
 [init]
 	defaultBranch = master
 [fetch]
