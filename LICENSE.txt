@@ -1,4 +1,4 @@
-Copyright 2015-2024 Steven Benner
+Copyright 2015-2025 Steven Benner
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
