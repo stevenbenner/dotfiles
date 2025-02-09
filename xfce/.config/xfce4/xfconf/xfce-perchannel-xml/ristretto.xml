@@ -7,10 +7,10 @@
     </property>
     <property name="bgcolor-override" type="bool" value="false"/>
     <property name="bgcolor" type="array">
-      <value type="double" value="0.000000"/>
-      <value type="double" value="0.000000"/>
-      <value type="double" value="0.000000"/>
-      <value type="double" value="0.000000"/>
+      <value type="double" value="0"/>
+      <value type="double" value="0"/>
+      <value type="double" value="0"/>
+      <value type="double" value="0"/>
     </property>
     <property name="height" type="uint" value="1050"/>
     <property name="width" type="uint" value="1550"/>

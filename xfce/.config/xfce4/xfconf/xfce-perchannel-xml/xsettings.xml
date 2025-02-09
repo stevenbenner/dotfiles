@@ -27,16 +27,16 @@
     <property name="MonospaceFontName" type="empty"/>
     <property name="IconSizes" type="empty"/>
     <property name="KeyThemeName" type="empty"/>
-    <property name="ToolbarStyle" type="empty"/>
-    <property name="ToolbarIconSize" type="empty"/>
     <property name="MenuImages" type="empty"/>
     <property name="ButtonImages" type="empty"/>
     <property name="MenuBarAccel" type="empty"/>
     <property name="CursorThemeName" type="string" value="default"/>
     <property name="CursorThemeSize" type="int" value="16"/>
-    <property name="DecorationLayout" type="empty"/>
+    <property name="DecorationLayout" type="string" value="icon,menu:minimize,maximize,close"/>
     <property name="DialogsUseHeader" type="bool" value="false"/>
     <property name="TitlebarMiddleClick" type="empty"/>
+    <property name="ToolbarStyle" type="empty"/>
+    <property name="ToolbarIconSize" type="empty"/>
   </property>
   <property name="Gdk" type="empty">
     <property name="WindowScalingFactor" type="empty"/>
