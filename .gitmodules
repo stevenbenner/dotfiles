@@ -2,3 +2,4 @@
 	path = mpv/.config/mpv/scripts-submodules/mpv_sponsorblock
 	url = https://github.com/po5/mpv_sponsorblock.git
 	branch = master
+	ignore = dirty
