@@ -7,6 +7,8 @@
 	helper = cache
 [core]
 	pager = /usr/share/git/diff-highlight/diff-highlight | less -RS -x1,5
+[branch]
+	sort = -committerdate
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
@@ -38,6 +40,7 @@
 	verbose = true
 [tag]
 	gpgSign = true
+	sort = -version:refname
 [init]
 	defaultBranch = master
 [fetch]
