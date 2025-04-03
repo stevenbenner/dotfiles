@@ -7,6 +7,8 @@
 	helper = cache
 [core]
 	pager = /usr/share/git/diff-highlight/diff-highlight | less -RS -x1,5
+[transfer]
+	fsckObjects = true
 [branch]
 	sort = -committerdate
 [diff]
