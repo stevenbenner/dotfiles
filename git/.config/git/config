@@ -12,6 +12,7 @@
 [diff]
 	algorithm = histogram
 	compactionHeuristic = true
+	mnemonicPrefix = true
 [merge]
 	conflictStyle = diff3
 [blame]
