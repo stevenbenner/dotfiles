@@ -16,7 +16,7 @@
 	compactionHeuristic = true
 	mnemonicPrefix = true
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 [blame]
 	date = short
 	coloring = highlightRecent
