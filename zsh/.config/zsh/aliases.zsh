@@ -25,7 +25,7 @@ elif [[ "$OSTYPE" = "freebsd"* ]]; then
 		alias ls='gls --no-group --classify --human-readable --literal --group-directories-first --color=auto'
 		alias ll='gls --no-group --classify --human-readable --literal --group-directories-first --color=auto -l'
 	else
-		alias ls='ls -GFh'
+		alias ls='ls -GF'
 		alias ll='ls -GFhl'
 	fi
 	alias grep='grep --color=auto --exclude={.bzr,.cvs,.git,.hg,.svn}'
