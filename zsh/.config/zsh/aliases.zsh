@@ -6,24 +6,24 @@ alias rm='rm -vI'
 alias rmdir='rmdir -v'
 alias mkdir='mkdir -v'
 if [[ "$OSTYPE" = "linux-gnu"* ]]; then
-	alias chown='chown -c --preserve-root'
-	alias chmod='chmod -c --preserve-root'
-	alias chgrp='chgrp -c --preserve-root'
+	alias chown='chown --changes --preserve-root'
+	alias chmod='chmod --changes --preserve-root'
+	alias chgrp='chgrp --changes --preserve-root'
 elif [[ "$OSTYPE" = "freebsd"* ]] && type gchown > /dev/null 2>&1; then
-	alias chown='gchown -c --preserve-root'
-	alias chmod='gchmod -c --preserve-root'
-	alias chgrp='gchgrp -c --preserve-root'
+	alias chown='gchown --changes --preserve-root'
+	alias chmod='gchmod --changes --preserve-root'
+	alias chgrp='gchgrp --changes --preserve-root'
 fi
 
 # colored output and basic tweaks
 if [[ "$OSTYPE" = "linux-gnu"* ]]; then
-	alias ls='ls -GFhN --group-directories-first --color=auto'
-	alias ll='ls -GFhNl --group-directories-first --color=auto'
+	alias ls='ls --no-group --classify --human-readable --literal --group-directories-first --color=auto'
+	alias ll='ls --no-group --classify --human-readable --literal --group-directories-first --color=auto -l'
 	alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 elif [[ "$OSTYPE" = "freebsd"* ]]; then
 	if type gls > /dev/null 2>&1; then
-		alias ls='gls -GFhN --group-directories-first --color=auto'
-		alias ll='gls -GFhNl --group-directories-first --color=auto'
+		alias ls='gls --no-group --classify --human-readable --literal --group-directories-first --color=auto'
+		alias ll='gls --no-group --classify --human-readable --literal --group-directories-first --color=auto -l'
 	else
 		alias ls='ls -GFh'
 		alias ll='ls -GFhl'
