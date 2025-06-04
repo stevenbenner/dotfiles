@@ -28,7 +28,9 @@ elif [[ "$OSTYPE" = "freebsd"* ]]; then
 		alias ll='ls -GFhl'
 	fi
 fi
-alias diff='colordiff'
+if command -v colordiff &> /dev/null; then
+	alias diff='colordiff'
+fi
 alias grep='grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 alias ip='ip -color'
 
