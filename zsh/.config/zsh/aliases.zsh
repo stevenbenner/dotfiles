@@ -18,14 +18,14 @@ fi
 # colored output and basic tweaks
 if [[ "$OSTYPE" = "linux-gnu"* ]]; then
 	alias ls='ls --classify --human-readable --literal --group-directories-first --color=auto'
-	alias ll='ls --classify --human-readable --literal --group-directories-first --color=auto -l'
+	alias ll='ls -l'
 elif [[ "$OSTYPE" = "freebsd"* ]]; then
 	if type gls > /dev/null 2>&1; then
 		alias ls='gls --classify --human-readable --literal --group-directories-first --color=auto'
-		alias ll='gls --classify --human-readable --literal --group-directories-first --color=auto -l'
+		alias ll='ls -l'
 	else
 		alias ls='ls -GF'
-		alias ll='ls -GFhl'
+		alias ll='ls -hl'
 	fi
 fi
 if command -v colordiff &> /dev/null; then
