@@ -18,6 +18,7 @@
         <value type="int" value="6"/>
         <value type="int" value="7"/>
         <value type="int" value="8"/>
+        <value type="int" value="9"/>
       </property>
       <property name="background-alpha" type="uint" value="70"/>
     </property>
@@ -68,6 +69,9 @@
       <property name="digital-date-font" type="string" value="Sans 9"/>
       <property name="digital-time-font" type="string" value="Sans 9"/>
       <property name="digital-date-format" type="string" value="%m/%d/%Y"/>
+    </property>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
   </property>
 </channel>
