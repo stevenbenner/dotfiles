@@ -1,4 +1,5 @@
 git/.config/git/config.local
+gtk/.config/gtk-3.0/bookmarks
 ssh/*
 sublime-text-3/*
 xfce/.config/xfce4/desktop/
