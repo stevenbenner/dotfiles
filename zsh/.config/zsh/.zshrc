@@ -8,6 +8,13 @@ if [[ ! -d "$XDG_STATE_HOME/zsh" ]]; then
 	mkdir -p "$XDG_STATE_HOME/zsh"
 fi
 
+# add ~/.local/bin to PATH
+home_local_bin="$HOME/.local/bin"
+if [[ -d $home_local_bin ]]; then
+	PATH="$home_local_bin:$PATH"
+fi
+unset home_local_bin
+
 # load configuration files
 source "$ZDOTDIR/colors.zsh"
 source "$ZDOTDIR/setopt.zsh"
