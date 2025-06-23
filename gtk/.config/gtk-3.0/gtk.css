@@ -1,0 +1,8 @@
+/* prevent black boxes around popovers */
+popover arrow {
+	background: transparent;
+	border-color: transparent;
+}
+
+/* add some horizontal padding to the whisker menu button */
+#whiskermenu-1 button { padding: 0 10px; }
