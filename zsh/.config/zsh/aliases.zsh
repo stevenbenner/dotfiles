@@ -17,11 +17,11 @@ fi
 
 # colored output and basic tweaks
 if [[ "$OSTYPE" = "linux-gnu"* ]]; then
-	alias ls='ls --classify --human-readable --literal --group-directories-first --color=auto'
+	alias ls='ls --classify --human-readable --literal --group-directories-first -v --color=auto'
 	alias ll='ls -l'
 elif [[ "$OSTYPE" = "freebsd"* ]]; then
 	if type gls > /dev/null 2>&1; then
-		alias ls='gls --classify --human-readable --literal --group-directories-first --color=auto'
+		alias ls='gls --classify --human-readable --literal --group-directories-first -v --color=auto'
 		alias ll='ls -l'
 	else
 		alias ls='ls -GF'
