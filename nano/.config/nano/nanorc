@@ -2,6 +2,9 @@
 set nowrap
 set tabsize 4
 
+# user interface
+set indicator
+
 # user interface colors
 set titlecolor brightwhite,blue
 set statuscolor brightwhite,green
