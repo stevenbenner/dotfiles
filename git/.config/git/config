@@ -1,70 +1,77 @@
+# general settings
+[core]
+	pager = /usr/share/git/diff-highlight/diff-highlight | less -RS -x1,5
+[include]
+	path = config.local
+[transfer]
+	fsckObjects = true
 [user]
 	name = Steven Benner
 	signingKey = "2CD4EBA98A45335E"
-[include]
-	path = config.local
-[credential]
-	helper = cache
-[core]
-	pager = /usr/share/git/diff-highlight/diff-highlight | less -RS -x1,5
-[transfer]
-	fsckObjects = true
+
+# command settings
+[blame]
+	coloring = highlightRecent
+	date = short
 [branch]
 	sort = -committerdate
+[column]
+	tag = auto dense
+[commit]
+	gpgSign = true
+	verbose = true
+[credential]
+	helper = cache
 [diff]
 	algorithm = histogram
 	colorMoved = plain
 	compactionHeuristic = true
 	mnemonicPrefix = true
+[fetch]
+	prune = true
+[init]
+	defaultBranch = master
 [merge]
 	conflictStyle = zdiff3
-[blame]
-	date = short
-	coloring = highlightRecent
+[pull]
+	ff = only
+[status]
+	showUntrackedFiles = all
+[tag]
+	gpgSign = true
+	sort = -version:refname
+
+# color settings
 [color "blame"]
 	highlightRecent = 240, 36 month ago, 242, 24 month ago, 244, 12 month ago, 246, \
 		9 month ago, 248, 6 month ago, 250, 3 month ago, 252, 2 month ago, 254, \
 		1 month ago, 178, 3 weeks ago, 216, 2 weeks ago, 215, 1 week ago, 214
 [color "diff"]
 	commit = 214 bold
-	meta = yellow bold
 	frag = 38
-	old = 196 bold
+	meta = yellow bold
 	new = 76 bold
+	old = 196 bold
 	whitespace = red reverse
 [color "diff-highlight"]
-	oldNormal = 196 bold
-	oldHighlight = 9 bold 52
-	newNormal = 76 bold
 	newHighlight = 82 bold 22
-[column]
-	tag = auto dense
-[commit]
-	gpgSign = true
-	verbose = true
-[tag]
-	gpgSign = true
-	sort = -version:refname
-[init]
-	defaultBranch = master
-[fetch]
-	prune = true
-[pull]
-	ff = only
-[status]
-	showUntrackedFiles = all
+	newNormal = 76 bold
+	oldHighlight = 9 bold 52
+	oldNormal = 196 bold
+
+# aliases
 [alias]
-	graph = log --graph --branches --remotes --tags --date-order --pretty=format:'%C(033)%h %C(white)%s %C(dim cyan)[%aN] %C(green)(%ar)%C(auto)%d'
-	taggraph = log --graph --tags --date-order --simplify-by-decoration --pretty=format:'%ai %h %d'
-	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
-	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
-	authors = shortlog -sn --no-merges
-	pullall = !zsh -ic 'git_pull_all'
-	whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
-	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
 	activefiles = !git log --format=format: --name-only | grep -E -v '^$' | sort | uniq -c | sort -rg | head -25
-	whoami = !git config --get user.name && git config --get user.email
-	outgoing = !git fetch && git log FETCH_HEAD..
+	authors = shortlog -sn --no-merges
+	graph = log --graph --branches --remotes --tags --date-order --pretty=format:'%C(033)%h %C(white)%s %C(dim cyan)[%aN] %C(green)(%ar)%C(auto)%d'
 	incoming = !git fetch && git log ..FETCH_HEAD
+	listdupes = !git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40
 	makehome = !git config user.email $(echo 'YWRtaW5Ac3RldmVuYmVubmVyLmNvbQo=' | base64 -d) && git config commit.gpgSign true && git config tag.gpgSign true
 	makework = !git config user.email $(echo 'c3RldmVuLmJlbm5lckBsaW5rc3lzLmNvbQo=' | base64 -d) && git config commit.gpgSign false && git config tag.gpgSign false
+	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
+	outgoing = !git fetch && git log FETCH_HEAD..
+	pullall = !zsh -ic 'git_pull_all'
+	taggraph = log --graph --tags --date-order --simplify-by-decoration --pretty=format:'%ai %h %d'
+	taglog = log --tags --date-order --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D' --date=short
+	whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
+	whoami = !git config --get user.name && git config --get user.email
