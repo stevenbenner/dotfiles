@@ -4,9 +4,11 @@ set tabsize 4
 
 # user interface
 set indicator
+set linenumbers
 
 # user interface colors
 set titlecolor brightwhite,blue
+set numbercolor white,blue
 set statuscolor brightwhite,green
 set keycolor green
 set functioncolor yellow
