@@ -25,6 +25,6 @@ Example:
 
 ### Manual symlinks
 
-Some items may be better installed by manually crating symlinks for specific files. In particular, the `ssh` folder, so as to preserve the permissions and keep any keys out of the dotfiles git repo.
+Some items may be better installed by manually creating symlinks for specific files. In particular, the `ssh` folder, so as to preserve the permissions and keep any keys out of the dotfiles git repo.
 
 `ln -s ssh/.ssh/config ~/.ssh/config`
