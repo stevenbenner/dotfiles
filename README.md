@@ -6,7 +6,7 @@ This software is licensed under the [MIT-0 license][license].
 
 [archlinux]: https://archlinux.org/
 [debian]: https://www.debian.org/
-[freebsd]: https://www.debian.org/
+[freebsd]: https://www.freebsd.org/
 [license]: LICENSE.txt
 
 ## Installation
