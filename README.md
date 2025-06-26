@@ -19,7 +19,9 @@ For this to work the dotfiles folder needs to be in the home directory (e.g. `~/
 
 Example:
 
-`stow git`
+```sh
+stow git
+```
 
 [stow]: https://www.gnu.org/software/stow/
 
@@ -27,4 +29,6 @@ Example:
 
 Some items may be better installed by manually creating symlinks for specific files. In particular, the `ssh` folder, so as to preserve the permissions and keep any keys out of the dotfiles git repo.
 
-`ln -s ssh/.ssh/config ~/.ssh/config`
+```sh
+ln -s ssh/.ssh/config ~/.ssh/config
+```
