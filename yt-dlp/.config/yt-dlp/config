@@ -1,0 +1,4 @@
+--paths ~/Videos
+--concurrent-fragments 3
+--merge-output-format mkv
+--embed-metadata
