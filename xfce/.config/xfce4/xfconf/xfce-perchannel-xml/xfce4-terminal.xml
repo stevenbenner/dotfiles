@@ -28,5 +28,5 @@
   <property name="misc-rewrap-on-resize" type="bool" value="true"/>
   <property name="misc-slim-tabs" type="bool" value="false"/>
   <property name="misc-new-tab-adjacent" type="bool" value="false"/>
-  <property name="scrolling-lines" type="uint" value="30000"/>
+  <property name="scrolling-lines" type="uint" value="100000"/>
 </channel>
