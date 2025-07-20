@@ -31,8 +31,8 @@
       <property name="position-search-alternate" type="bool" value="true"/>
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="position-categories-alternate" type="bool" value="true"/>
-      <property name="menu-width" type="int" value="430"/>
-      <property name="menu-height" type="int" value="684"/>
+      <property name="menu-width" type="int" value="467"/>
+      <property name="menu-height" type="int" value="697"/>
       <property name="menu-opacity" type="int" value="85"/>
       <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
       <property name="show-command-switchuser" type="bool" value="true"/>
