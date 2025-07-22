@@ -61,6 +61,7 @@
     <property name="plugin-6" type="string" value="diskperf"/>
     <property name="plugin-7" type="string" value="systray">
       <property name="show-frame" type="bool" value="false"/>
+      <property name="icon-size" type="int" value="24"/>
     </property>
     <property name="plugin-8" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
