@@ -1,4 +1,4 @@
-function git_prompt_info {
+git_prompt_info() {
 	local gitstatus
 
 	gitstatus=$(git status --porcelain=v2 --branch 2> /dev/null)
@@ -47,7 +47,7 @@ function git_prompt_info {
 	fi
 }
 
-function ssh_prompt_info {
+ssh_prompt_info() {
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 		echo "%F{033}%n%F{white}@%F{cyan}%m%f "
 	fi

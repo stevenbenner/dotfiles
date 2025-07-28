@@ -1,4 +1,4 @@
-function load_nvmrc {
+load_nvmrc() {
 	if [[ -f .nvmrc && -r .nvmrc ]]; then
 		nvm use
 	elif [[ $(nvm version) != 'system' ]]; then
@@ -7,7 +7,7 @@ function load_nvmrc {
 	fi
 }
 
-function hook_nvm {
+hook_nvm() {
 	unset -f nvm node npm
 	if [[ -f /usr/share/nvm/init-nvm.sh ]]; then
 		source /usr/share/nvm/init-nvm.sh
@@ -17,17 +17,17 @@ function hook_nvm {
 	fi
 }
 
-function nvm {
+nvm() {
 	hook_nvm
 	nvm "$@"
 }
 
-function node {
+node() {
 	hook_nvm
 	node "$@"
 }
 
-function npm {
+npm() {
 	hook_nvm
 	npm "$@"
 }

@@ -1,10 +1,10 @@
-function precmd {
+precmd() {
 	# print working directory to title
 	print -Pn "\e]2;$PWD\a"
 }
 
 # shellcheck disable=SC2296
-function preexec {
+preexec() {
 	local trimarg cmd basecmd
 
 	trimarg="${1#"${1%%[![:space:]]*}"}"  # trim leading whitespace

@@ -1,4 +1,4 @@
-function extract {
+extract() {
 	if [ ! -f "$1" ]; then
 		echo "'$1' is not a valid file" >&2
 		return 1
@@ -44,7 +44,7 @@ function extract {
 	esac
 }
 
-function git_pull_all {
+git_pull_all() {
 	local run current_branch
 
 	[[ ${1} = -n ]] && shift && run='echo'
@@ -56,7 +56,7 @@ function git_pull_all {
 	[[ -n ${current_branch} ]] && $run git checkout "${current_branch#refs/heads/}"
 }
 
-function man {
+man() {
 	env \
 		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
 		LESS_TERMCAP_md="$(printf '\e[1;31m')" \
