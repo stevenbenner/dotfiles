@@ -1,3 +1,4 @@
+# extract an archive and/or compressed file to the current working directory
 extract() {
 	if [ ! -f "$1" ]; then
 		echo "'$1' is not a valid file" >&2
@@ -44,6 +45,7 @@ extract() {
 	esac
 }
 
+# run `git pull` on all local branches
 git_pull_all() {
 	local run current_branch
 
@@ -56,6 +58,7 @@ git_pull_all() {
 	[[ -n ${current_branch} ]] && $run git checkout "${current_branch#refs/heads/}"
 }
 
+# wrapper for man program to add some formatting
 man() {
 	env \
 		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
