@@ -48,14 +48,21 @@ extract() {
 # run `git pull` on all local branches
 git_pull_all() {
 	local run current_branch
+	local -i exit_code=0
 
 	[[ ${1} = -n ]] && shift && run='echo'
 
 	current_branch=$(git symbolic-ref HEAD 2> /dev/null)
 	for branch in $(git branch | cut -c 3-) ; do
-		$run git checkout "$branch" && $run git pull --ff-only || return 2
+		if ! ${run} git checkout "${branch}"; then
+			exit_code=2
+			continue
+		fi
+		${run} git pull --ff-only || exit_code=3
 	done
 	[[ -n ${current_branch} ]] && $run git checkout "${current_branch#refs/heads/}"
+
+	return "${exit_code}"
 }
 
 # wrapper for man program to add some formatting
