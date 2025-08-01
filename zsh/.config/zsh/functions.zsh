@@ -52,7 +52,7 @@ git_pull_all() {
 
 	[[ ${1} = -n ]] && shift && run='echo'
 
-	current_branch=$(git symbolic-ref HEAD 2> /dev/null)
+	current_branch=$(git branch --show-current)
 	for branch in $(git branch | cut -c 3-) ; do
 		if ! ${run} git checkout "${branch}"; then
 			exit_code=2
@@ -60,7 +60,7 @@ git_pull_all() {
 		fi
 		${run} git pull --ff-only || exit_code=3
 	done
-	[[ -n ${current_branch} ]] && $run git checkout "${current_branch#refs/heads/}"
+	[[ -n ${current_branch} ]] && $run git checkout "${current_branch}"
 
 	return "${exit_code}"
 }
