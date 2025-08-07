@@ -53,7 +53,7 @@ git_pull_all() {
 	[[ ${1} = -n ]] && shift && run='echo'
 
 	current_branch=$(git branch --show-current) || return "${?}"
-	for branch in $(git branch | cut -c 3-) ; do
+	for branch in $(git for-each-ref --format='%(refname:lstrip=2)' refs/heads/); do
 		if ! ${run} git checkout "${branch}"; then
 			exit_code=2
 			continue
