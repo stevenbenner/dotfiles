@@ -10,7 +10,7 @@ fi
 
 # add ~/.local/bin to PATH
 home_local_bin="$HOME/.local/bin"
-if [[ -d $home_local_bin ]]; then
+if [[ -d $home_local_bin && ! $PATH =~ (^|:)$home_local_bin(:|$) ]]; then
 	PATH="$home_local_bin:$PATH"
 fi
 unset home_local_bin
