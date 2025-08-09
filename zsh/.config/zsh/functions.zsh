@@ -1,6 +1,6 @@
 # extract an archive and/or compressed file to the current working directory
 extract() {
-	if [ ! -f "$1" ]; then
+	if [[ ! -f $1 ]]; then
 		echo "'$1' is not a valid file" >&2
 		return 1
 	fi

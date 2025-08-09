@@ -4,7 +4,7 @@ git_prompt_info() {
 	gitstatus=$(git status --porcelain=v2 --branch 2> /dev/null)
 
 	# if we're in a git repo
-	if [ $? -ne 128 ]; then
+	if (( $? != 128 )); then
 		local branch ab chmark abmark
 
 		branch=$(awk '$2 == "branch.head" { print $3 }' <<< "$gitstatus")
@@ -13,14 +13,14 @@ git_prompt_info() {
 		# pending changes mark
 		if [[ -f .git/MERGE_HEAD ]]; then
 			# merge in progress
-			if [[ "$(awk '$1 == u { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+			if (( $(awk '$1 == u { print $2 }' <<< "$gitstatus" | wc -l) > 0 )); then
 				chmark="%F{red}unmerged%f" # have unmerged changes
 			else
 				chmark="%F{green}merged%f" # have merged changes
 			fi
-		elif [[ "$(awk '$1 ~ /^[12]$/ && $2 ~ /^[MTADRC]/ { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+		elif (( $(awk '$1 ~ /^[12]$/ && $2 ~ /^[MTADRC]/ { print $2 }' <<< "$gitstatus" | wc -l) > 0 )); then
 			chmark="%F{blue}%B⊕%b%f" # have staged changes
-		elif [[ "$(awk '$1 ~ /^[12?]$/ { print $2 }' <<< "$gitstatus" | wc -l)" -gt 0 ]]; then
+		elif (( $(awk '$1 ~ /^[12?]$/ { print $2 }' <<< "$gitstatus" | wc -l) > 0 )); then
 			chmark="%F{red}%B⊞%b%f" # have unstaged changes
 		fi
 
@@ -39,7 +39,7 @@ git_prompt_info() {
 		esac
 
 		# full git status with current branch
-		if [[ "$branch" != '(detached)' ]]; then
+		if [[ $branch != '(detached)' ]]; then
 			echo "%F{green}[%B$branch%b]%f$abmark$chmark " # on a branch
 		else
 			echo "%F{red}[%Bdetached%b]%f " # detached from branch
@@ -48,7 +48,7 @@ git_prompt_info() {
 }
 
 ssh_prompt_info() {
-	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+	if [[ -n $SSH_CLIENT || -n $SSH_TTY ]]; then
 		echo "%F{033}%n%F{white}@%F{cyan}%m%f "
 	fi
 }

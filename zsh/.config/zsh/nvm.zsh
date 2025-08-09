@@ -1,7 +1,7 @@
 load_nvmrc() {
 	if [[ -f .nvmrc && -r .nvmrc ]]; then
 		nvm use
-	elif [[ $(nvm version) != 'system' ]]; then
+	elif [[ $(nvm version) != system ]]; then
 		echo "Reverting to nvm system version"
 		nvm use system
 	fi

@@ -5,21 +5,21 @@ alias ln='ln -vi'
 alias rm='rm -vI'
 alias rmdir='rmdir -v'
 alias mkdir='mkdir -v'
-if [[ "$OSTYPE" = "linux-gnu"* ]]; then
+if [[ $OSTYPE = linux-gnu* ]]; then
 	alias chown='chown --changes --preserve-root'
 	alias chmod='chmod --changes --preserve-root'
 	alias chgrp='chgrp --changes --preserve-root'
-elif [[ "$OSTYPE" = "freebsd"* ]] && type gchown > /dev/null 2>&1; then
+elif [[ $OSTYPE = freebsd* ]] && type gchown > /dev/null 2>&1; then
 	alias chown='gchown --changes --preserve-root'
 	alias chmod='gchmod --changes --preserve-root'
 	alias chgrp='gchgrp --changes --preserve-root'
 fi
 
 # colored output and basic tweaks
-if [[ "$OSTYPE" = "linux-gnu"* ]]; then
+if [[ $OSTYPE = linux-gnu* ]]; then
 	alias ls='ls --classify --human-readable --literal --group-directories-first -v --color=auto'
 	alias ll='ls -l'
-elif [[ "$OSTYPE" = "freebsd"* ]]; then
+elif [[ $OSTYPE = freebsd* ]]; then
 	if type gls > /dev/null 2>&1; then
 		alias ls='gls --classify --human-readable --literal --group-directories-first -v --color=auto'
 		alias ll='ls -l'
