@@ -54,11 +54,11 @@ zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipa
 zstyle '*' single-ignored show
 
 # load grunt completions if grunt-cli is available
-if type grunt > /dev/null 2>&1; then
+if type grunt &> /dev/null; then
 	eval "$(grunt --completion=zsh)"
 fi
 
 # load gulp completions if gulp-cli is available
-if type gulp > /dev/null 2>&1; then
+if type gulp &> /dev/null; then
 	eval "$(gulp --completion=zsh)"
 fi

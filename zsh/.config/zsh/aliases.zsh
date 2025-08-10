@@ -9,7 +9,7 @@ if [[ $OSTYPE = linux-gnu* ]]; then
 	alias chown='chown --changes --preserve-root'
 	alias chmod='chmod --changes --preserve-root'
 	alias chgrp='chgrp --changes --preserve-root'
-elif [[ $OSTYPE = freebsd* ]] && type gchown > /dev/null 2>&1; then
+elif [[ $OSTYPE = freebsd* ]] && type gchown &> /dev/null; then
 	alias chown='gchown --changes --preserve-root'
 	alias chmod='gchmod --changes --preserve-root'
 	alias chgrp='gchgrp --changes --preserve-root'
@@ -20,7 +20,7 @@ if [[ $OSTYPE = linux-gnu* ]]; then
 	alias ls='ls --classify --human-readable --literal --group-directories-first -v --color=auto'
 	alias ll='ls -l'
 elif [[ $OSTYPE = freebsd* ]]; then
-	if type gls > /dev/null 2>&1; then
+	if type gls &> /dev/null; then
 		alias ls='gls --classify --human-readable --literal --group-directories-first -v --color=auto'
 		alias ll='ls -l'
 	else
