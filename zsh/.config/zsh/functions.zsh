@@ -1,5 +1,9 @@
 # extract an archive and/or compressed file to the current working directory
 extract() {
+	if [[ -z $1 ]]; then
+		echo "No file name specified" >&2
+		return 1
+	fi
 	if [[ ! -f $1 ]]; then
 		echo "'$1' is not a valid file" >&2
 		return 1
