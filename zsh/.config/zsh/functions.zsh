@@ -9,11 +9,11 @@ extract() {
 
 	case "$1" in
 		*.tar.bz2|*.tbz2)
-			tar xjf "./$1" ;;
+			tar -xjf "./$1" ;;
 		*.tar.gz|*.tgz)
-			tar xzf "./$1" ;;
+			tar -xzf "./$1" ;;
 		*.tar.xz|*.txz)
-			tar xJf "./$1" ;;
+			tar -xJf "./$1" ;;
 		*.tar.zst)
 			tar --zstd -xf "./$1" ;;
 		*.7z)
@@ -29,7 +29,7 @@ extract() {
 		*.rar)
 			unrar x "./$1" ;;
 		*.tar)
-			tar xf "./$1" ;;
+			tar -xf "./$1" ;;
 		*.xz)
 			unxz --keep "./$1" ;;
 		*.Z)
