@@ -44,7 +44,7 @@ extract() {
 			unzstd "./$1" ;;
 		*)
 			echo "$1 is not a supported file format" >&2
-			return 1
+			return 2
 			;;
 	esac
 }
