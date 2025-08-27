@@ -7,6 +7,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # global exports
 export PAGER='less'
 export EDITOR='nano'
+export LANG='en_US.UTF-8'
 export LC_COLLATE='C'
 
 # set location of zsh config
