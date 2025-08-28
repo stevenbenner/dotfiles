@@ -5,6 +5,11 @@ if [[ -d $home_local_bin && ! $PATH =~ (^|:)$home_local_bin(:|$) ]]; then
 fi
 unset home_local_bin
 
+# override terminal to enable alternate screen on freebsd
+if [[ $OSTYPE = freebsd* ]]; then
+	TERM='xterm-clear'
+fi
+
 # create zsh XDG directories if they do not already exist
 if [[ ! -d $XDG_CACHE_HOME/zsh ]]; then
 	echo 'No zsh cache directory found! Creating cache directory.'
