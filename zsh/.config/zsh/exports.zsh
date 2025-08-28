@@ -1,5 +1,7 @@
+# software configuration
 export LESS='--ignore-case --raw-control-chars'
 export P4CONFIG='.p4config'
+export SYSTEMD_LESS='FRSMK'
 
 # xdg directories
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
