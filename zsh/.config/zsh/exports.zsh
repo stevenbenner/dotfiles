@@ -1,5 +1,5 @@
 # software configuration
-export LESS='--ignore-case --use-color --RAW-CONTROL-CHARS'
+export LESS='--ignore-case --use-color --RAW-CONTROL-CHARS --jump-target=5'
 export P4CONFIG='.p4config'
 export SYSTEMD_LESS='FRSMK'
 
