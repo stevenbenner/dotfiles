@@ -1,3 +1,8 @@
+# .zshenv: for all shells
+#     executed first
+# Setup code for every type of shell. It should not change the behavior of any
+# programs. This file should be as close to no-op as possible.
+
 # set xdg user directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

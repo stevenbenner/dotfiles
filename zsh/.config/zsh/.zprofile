@@ -1,3 +1,8 @@
+# .zprofile: for login shells
+#     executed after .zshenv, and before .zshrc (interactive)
+# Setup code for login shells. Stuff that prepares the user environment. A good
+# place for things that should not be reset/rerun every time a terminal opens.
+
 # add ~/.local/bin to PATH
 home_local_bin="$HOME/.local/bin"
 if [[ -d $home_local_bin && ! $PATH =~ (^|:)$home_local_bin(:|$) ]]; then

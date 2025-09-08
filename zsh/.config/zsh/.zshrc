@@ -1,3 +1,7 @@
+# .zshrc: for interactive shells
+#     executed after .zshenv, and .zprofile (for login)
+# Code to support human interaction in the shell.
+
 # load configuration files
 source "$ZDOTDIR/colors.zsh"
 source "$ZDOTDIR/setopt.zsh"
