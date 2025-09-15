@@ -70,7 +70,7 @@
 	makework = !git config user.email $(echo 'c3RldmVuLmJlbm5lckBsaW5rc3lzLmNvbQo=' | base64 --decode) && git config commit.gpgSign false && git config tag.gpgSign false
 	mergelog = log --merges --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%cr%C(reset) %C(blue)%cn%C(reset)%C(red)%d%C(reset) %s'
 	outgoing = !git fetch && git log FETCH_HEAD..
-	pullall = !zsh -ic 'git_pull_all'
+	pullall = !git-pull-all
 	taggraph = log --graph --tags --date-order --simplify-by-decoration --pretty=format:'%ai %h %d'
 	taglog = log --tags --date-order --date=short --simplify-by-decoration --pretty='format:%C(green)%ad %C(red)%h %C(reset)%D'
 	whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD

@@ -1,23 +1,3 @@
-# run `git pull` on all local branches
-git_pull_all() {
-	local run current_branch
-	local -i exit_code=0
-
-	[[ ${1} = -n ]] && shift && run='echo'
-
-	current_branch=$(git branch --show-current) || return "${?}"
-	for branch in $(git for-each-ref --format='%(refname:lstrip=2)' refs/heads/); do
-		if ! ${run} git checkout "${branch}"; then
-			exit_code=2
-			continue
-		fi
-		${run} git pull --ff-only || exit_code=3
-	done
-	[[ -n ${current_branch} ]] && $run git checkout "${current_branch}"
-
-	return "${exit_code}"
-}
-
 # wrapper for man program to add some formatting
 man() {
 	env \
