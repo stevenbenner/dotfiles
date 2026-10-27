@@ -35,6 +35,7 @@
 	"ruler_style": "stippled",
 	"scroll_past_end": false,
 	"theme": "Default Dark.sublime-theme",
+	"file_icon_theme": "A File Icon.sublime-file-icons",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 }
