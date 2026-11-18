@@ -18,9 +18,9 @@ fi
 # create zsh XDG directories if they do not already exist
 if [[ ! -d $XDG_CACHE_HOME/zsh ]]; then
 	echo 'No zsh cache directory found! Creating cache directory.'
-	mkdir -p "$XDG_CACHE_HOME/zsh"
+	mkdir -p --mode=0700 "$XDG_CACHE_HOME/zsh"
 fi
 if [[ ! -d $XDG_STATE_HOME/zsh ]]; then
 	echo 'No zsh state directory found! Creating state directory.'
-	mkdir -p "$XDG_STATE_HOME/zsh"
+	mkdir -p --mode=0700 "$XDG_STATE_HOME/zsh"
 fi
