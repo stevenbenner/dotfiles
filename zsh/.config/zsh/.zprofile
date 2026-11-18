@@ -15,10 +15,14 @@ if [[ $OSTYPE = freebsd* ]]; then
 	TERM='xterm-clear'
 fi
 
-# create zsh XDG directories if they do not already exist
+# create XDG directories if they do not already exist
 if [[ ! -d $XDG_CACHE_HOME/zsh ]]; then
 	echo 'No zsh cache directory found! Creating cache directory.'
 	mkdir -p --mode=0700 "$XDG_CACHE_HOME/zsh"
+fi
+if [[ ! -d $XDG_DATA_HOME ]]; then
+	echo 'No XDG data directory found! Creating data directory.'
+	mkdir -p --mode=0700 "$XDG_DATA_HOME"
 fi
 if [[ ! -d $XDG_STATE_HOME/zsh ]]; then
 	echo 'No zsh state directory found! Creating state directory.'
